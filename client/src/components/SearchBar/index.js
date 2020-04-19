@@ -1,20 +1,20 @@
 import React from "react";
+import "./style.css"
 import {Form, Button, Row, Col} from "react-bootstrap";
 
 function SearchBar() {
     return (
-        <Form >
+        <div className="my-4 mx-3">
+        <Form className="form-inline" >
             <Row >
-                <Col >
-                    <Form.Control size="large" type="text" placeholder="Large text" />
-                </Col>
-                <Col>
+                <Form.Control type="text" placeholder="Search" className="mx-5" id="searchForm" />
                 <Button variant="primary" type="submit">
-                    Submit
+                    Search
                 </Button>
-                </Col>
+    
                 </Row>
         </Form>
+        </div>
     )
 }
 

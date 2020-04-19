@@ -1,21 +1,16 @@
 import React from "react";
-import "./style.css"
-import imageSmall from "../../images/Grey100x100.jpg"
+import {List, ListItem} from "../List";
 
-function SelectDisplay() {
+function ResultDisplay() {
     return (
         <>
-        <div className="container mx-3">
-        <img    
-        width={300}
-        height={300}
-        className="m-3"
-        src={imageSmall}
-        alt="Generic placeholder"/>
-        <div id="toShake">Shake Well</div>
-        </div>
-        </>
-    )
-}
+        <List title="Search Results">
+            <ListItem></ListItem>
+            <ListItem></ListItem>
 
-export default SelectDisplay
+        </List>
+        </>
+    );
+};
+
+export default ResultDisplay;

@@ -5,7 +5,7 @@ import imageSmall from "../../images/Grey100x100.jpg"
 function SelectDisplay() {
     return (
         <>
-        <div className="container mx-3">
+        <div className="container m-3">
         <img    
         width={300}
         height={300}

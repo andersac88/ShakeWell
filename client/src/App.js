@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import DatabaseDisplay from "./components/DatabaseDisplay";
 import SelectionDisplay from "./components/SelectionDisplay";
 import SearchBar from "./components/SearchBar";
+import ResultDisplay from "./components/ResultDisplay";
 
 
 class App extends Component {
@@ -18,18 +19,12 @@ class App extends Component {
               <Row>
                 <SelectionDisplay></SelectionDisplay>
               </Row>
-              <Row>
-                <Col>
+              <Row>  
                 <SearchBar></SearchBar>
-                </Col>
               </Row>
               <Row>
                 <Col>
-                
-                
-                
-                
-                
+                <ResultDisplay></ResultDisplay>
                 </Col>
               </Row>
             </Col>

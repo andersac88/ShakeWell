@@ -2,15 +2,15 @@ import React from "react";
 import {Media} from "react-bootstrap";
 import imageSmall from "../../images/Grey100x100.jpg"
 
-export function List({children}) {
+export function List(props) {
     return (
-      <div className="border border-primary list-overflow-container m-3">
-      <ul className="list-group">{children}</ul>
+      <div className="border border-primary list-overflow-container m-3">{props.title}
+      <ul className="list-group">{props.children}</ul>
     </div>
     )
 }
 
-export function ListItem() {
+export function ListItem(props) {
   return   <Media className="border border-primary m-2" as="li">
   <img
     width={75}

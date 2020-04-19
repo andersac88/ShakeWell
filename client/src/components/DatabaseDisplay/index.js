@@ -4,7 +4,7 @@ import {List, ListItem} from "../List";
 function DatabaseDisplay() {
     return (
         <>
-        <List>
+        <List title="Database">
             <ListItem></ListItem>
             <ListItem></ListItem>
             <ListItem></ListItem>
