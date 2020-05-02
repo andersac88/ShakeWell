@@ -54,7 +54,7 @@ class App extends Component {
           <Row>
             <Col>
               <Row>
-                <SelectionDisplay></SelectionDisplay>
+                <SelectionDisplay array={this.state.temp.slice(0, 1)}></SelectionDisplay>
               </Row>
               <Row>  
                 <SearchBar></SearchBar>
