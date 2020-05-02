@@ -9,6 +9,14 @@ import ResultDisplay from "./components/ResultDisplay";
 
 
 class App extends Component {
+  
+  constructor(props) {
+    super(props)
+    this.state = { 
+      tempArray: [1, 2, 3, 8, 9, 0, 1, 5]
+    }
+  }
+  
   render() {
     return (
       <>
@@ -24,12 +32,12 @@ class App extends Component {
               </Row>
               <Row>
                 <Col>
-                <ResultDisplay></ResultDisplay>
+                <ResultDisplay array={this.state.tempArray.slice(0, 4)}></ResultDisplay>
                 </Col>
               </Row>
             </Col>
             <Col>
-              <DatabaseDisplay></DatabaseDisplay>
+              <DatabaseDisplay array={this.state.tempArray}></DatabaseDisplay>
             </Col>
           </Row>
         </Container>

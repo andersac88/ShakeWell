@@ -1,17 +1,13 @@
 import React from "react";
 import {List, ListItem} from "../List";
-
-function DatabaseDisplay() {
+function DatabaseDisplay({array}) {
     return (
         <>
         <List title="Database">
-            <ListItem></ListItem>
-            <ListItem></ListItem>
-            <ListItem></ListItem>
-            <ListItem></ListItem>
-            <ListItem></ListItem>
-            <ListItem></ListItem>
-            <ListItem></ListItem>
+            {array.map(temp => (
+                <ListItem number = {temp}></ListItem>
+            ))   
+            }
         </List>
         </>
     );

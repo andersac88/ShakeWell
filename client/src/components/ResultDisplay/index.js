@@ -1,13 +1,14 @@
 import React from "react";
 import {List, ListItem} from "../List";
 
-function ResultDisplay() {
+function ResultDisplay({array}) {
     return (
         <>
         <List title="Search Results">
-            <ListItem></ListItem>
-            <ListItem></ListItem>
-
+       {array.map(temp => (
+           <ListItem number={temp}></ListItem>
+       ))
+}
         </List>
         </>
     );
