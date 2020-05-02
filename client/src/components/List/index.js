@@ -1,6 +1,7 @@
 import React from "react";
 import {Media} from "react-bootstrap";
 import imageSmall from "../../images/Grey100x100.jpg"
+import faker from "faker";
 
 export function List(props) {
     return (
