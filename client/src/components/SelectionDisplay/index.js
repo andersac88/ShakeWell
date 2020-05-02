@@ -1,6 +1,6 @@
 import React from "react";
-import "./style.css"
-import imageSmall from "../../images/Grey100x100.jpg"
+import "./style.css";
+import faker from "faker";
 
 function SelectDisplay() {
     return (
@@ -10,7 +10,7 @@ function SelectDisplay() {
         width={300}
         height={300}
         className="m-3"
-        src={imageSmall}
+        src={faker.image.image()}
         alt="Generic placeholder"/>
         <div id="toShake">Shake Well</div>
         </div>

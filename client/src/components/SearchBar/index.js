@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css"
-import {Form, Button, Row, Col} from "react-bootstrap";
+import {Form, Button, Row} from "react-bootstrap";
 
 function SearchBar() {
     return (

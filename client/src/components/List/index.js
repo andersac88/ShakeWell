@@ -1,6 +1,5 @@
 import React from "react";
 import {Media} from "react-bootstrap";
-import imageSmall from "../../images/Grey100x100.jpg"
 import faker from "faker";
 
 export function List(props) {
@@ -17,14 +16,13 @@ export function ListItem(props) {
     width={75}
     height={75}
     className="m-3"
-    src={imageSmall}
+    src={faker.random.image()}
     alt="Generic placeholder"
   />
   <Media.Body>
-    <h5>List-based media object</h5>
+    <h5>{faker.random.words()}</h5>
     <p>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-      ante sollici
+      {faker.random.word()}
     </p>
   </Media.Body>
 </Media>
