@@ -5,7 +5,7 @@ function DatabaseDisplay({array}) {
         <>
         <List title="Database">
             {array.map(temp => (
-                <ListItem number = {temp}></ListItem>
+                <ListItem number = {temp} image={temp.image}></ListItem>
             ))   
             }
         </List>

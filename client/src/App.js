@@ -6,14 +6,43 @@ import DatabaseDisplay from "./components/DatabaseDisplay";
 import SelectionDisplay from "./components/SelectionDisplay";
 import SearchBar from "./components/SearchBar";
 import ResultDisplay from "./components/ResultDisplay";
+import faker from "faker";
 
 
 class App extends Component {
-  
+
   constructor(props) {
     super(props)
     this.state = { 
-      tempArray: [1, 2, 3, 8, 9, 0, 1, 5]
+      temp: 
+      [{
+        number: 1,
+        image: faker.random.image()
+      }, {
+        number: 2,
+        image: faker.random.image()
+      }, {
+        number: 3,
+        image: faker.random.image()
+      }, {
+        number: 4,
+        image: faker.random.image()
+      }, {
+        number: 5,
+        image: faker.random.image()
+      }, {
+        number: 5,
+        image: faker.random.image()
+      }, {
+        number: 5,
+        image: faker.random.image()
+      }, {
+        number: 5,
+        image: faker.random.image()
+      }, {
+        number: 5,
+        image: faker.random.image()
+      }]
     }
   }
   
@@ -32,12 +61,12 @@ class App extends Component {
               </Row>
               <Row>
                 <Col>
-                <ResultDisplay array={this.state.tempArray.slice(0, 4)}></ResultDisplay>
+                <ResultDisplay array={this.state.temp.slice(0, 5)}></ResultDisplay>
                 </Col>
               </Row>
             </Col>
             <Col>
-              <DatabaseDisplay array={this.state.tempArray}></DatabaseDisplay>
+              <DatabaseDisplay array={this.state.temp}></DatabaseDisplay>
             </Col>
           </Row>
         </Container>

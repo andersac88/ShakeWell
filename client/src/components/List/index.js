@@ -2,10 +2,10 @@ import React from "react";
 import {Media} from "react-bootstrap";
 import faker from "faker";
 
-export function List(props) {
+export function List({children, title}) {
     return (
-      <div className="border border-primary list-overflow-container m-3">{props.title}
-      <ul className="list-group">{props.children}</ul>
+      <div className="border border-primary list-overflow-container m-3">{title}
+      <ul className="list-group">{children}</ul>
     </div>
     )
 }
@@ -16,7 +16,7 @@ export function ListItem(props) {
     width={75}
     height={75}
     className="m-3"
-    src={faker.random.image()}
+    src={props.image}
     alt="Generic placeholder"
   />
   <Media.Body>
