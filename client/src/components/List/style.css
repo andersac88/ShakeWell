@@ -1,0 +1,13 @@
+#outerList {
+    border-radius: 1%;
+    border-width: .33em !important;
+    background: white;
+}
+
+#outerListList {
+    background: white;
+}
+
+#innerList {
+    border-radius: 1.5%
+}

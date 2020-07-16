@@ -1,0 +1,26 @@
+[{
+    "name": "Coca-cola",
+    "shake": false 
+}, {
+    "name": "Ice-Tea",
+    "shake": true 
+}, {
+    "name": "Sprite",
+    "shake": false 
+}, {
+    "name": "Orange Juice",
+    "shake": true 
+}, {
+    "name": "Milk",
+    "shake": false 
+}, {
+    "name": "Water",
+    "shake": false 
+}, {
+    "name": "Coffee",
+    "shake": false 
+}, {
+    "name": "Dr. Pepper",
+    "shake": false 
+}
+]

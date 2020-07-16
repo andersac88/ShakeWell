@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import faker from "faker";
 
-function SelectDisplay({image}) {
+function SelectDisplay(props) {
     return (
         <>
         <div className="container m-3">
@@ -10,7 +10,7 @@ function SelectDisplay({image}) {
         width={300}
         height={300}
         className="m-3"
-        src={image}
+        src={props.array[0].image}
         alt="Generic placeholder"/>
         <div id="toShake">Shake Well</div>
         </div>
