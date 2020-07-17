@@ -9,5 +9,11 @@
 }
 
 #innerList {
-    border-radius: 1.5%
+    border-radius: 1.5%;
+    box-shadow: 5px 10px 10px #888888;
+}
+
+#containerTitle {
+    text-align: center;
+    text-decoration: underline;
 }

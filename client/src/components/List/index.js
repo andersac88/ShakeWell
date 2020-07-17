@@ -5,8 +5,8 @@ import "./style.css"
 
 export function List({ children, title }) {
 	return (
-		<div id="outerList" className="border border-primary list-overflow-container m-3">
-			{title}
+		<div id="outerList" className="border border-secondary list-overflow-container m-3">
+			<h5 id="containerTitle">{title}</h5>
 			<ul id="outerListList" className="list-group">{children}</ul>
 		</div>
 	);
@@ -14,7 +14,7 @@ export function List({ children, title }) {
 
 export function ListItem(props) {
 	return (
-		<Media id="innerList" className="border border-primary m-2" as="li">
+		<Media id="innerList" className="border border-secondary m-2" as="li">
 			<img
 				width={75}
 				height={75}

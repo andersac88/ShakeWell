@@ -4,17 +4,16 @@ import faker from "faker";
 
 function SelectDisplay(props) {
     return (
-        <>
-        <div className="container m-3">
+        <div id="selectionDisplay" className="container m-3">
         <img    
         width={300}
         height={300}
-        className="m-3"
+        className="mx-3 mt-3"
         src={props.array[0].image}
         alt="Generic placeholder"/>
         <div id="toShake">Shake Well</div>
+      
         </div>
-        </>
     )
 }
 

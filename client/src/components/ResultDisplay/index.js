@@ -7,7 +7,7 @@ function ResultDisplay({array}) {
         <List title="Search Results">
        {array.map(temp => (
            <ListItem image={temp.image}></ListItem>
-       ))};
+       ))}
         </List>
         </>
     );
