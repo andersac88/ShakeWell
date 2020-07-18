@@ -8,7 +8,8 @@ function DatabaseDisplay({array}) {
         <List title="Database">
             {array.map(temp => (
                 <ListItem 
-                    number = {temp}
+                    name = {temp.name}
+                    shake = {temp.shake}
                     image={temp.image}>
                 </ListItem>
             ))   

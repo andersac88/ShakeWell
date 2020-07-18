@@ -16,32 +16,41 @@ class App extends Component {
     this.state = { 
       temp: 
       [{
-        number: 1,
-        image: faker.random.image()
+        name: "Coke",
+        image: faker.random.image(),
+        shake: false
       }, {
-        number: 2,
-        image: faker.random.image()
+        name: "Sprite",
+        image: faker.random.image(),
+        shake: false
       }, {
-        number: 3,
-        image: faker.random.image()
+        name: "Water",
+        image: faker.random.image(),
+        shake: false
       }, {
-        number: 4,
-        image: faker.random.image()
+        name: "Milk",
+        image: faker.random.image(),
+        shake: false
       }, {
-        number: 5,
-        image: faker.random.image()
+        name: "Ice Tea",
+        image: faker.random.image(),
+        shake: true
       }, {
-        number: 5,
-        image: faker.random.image()
+        name: "Orange Juice",
+        image: faker.random.image(),
+        shake: true
       }, {
-        number: 5,
-        image: faker.random.image()
+        name: "Coffee",
+        image: faker.random.image(),
+        shake: false
       }, {
-        number: 5,
-        image: faker.random.image()
+        name: "Gatorade",
+        image: faker.random.image(),
+        shake: false
       }, {
-        number: 5,
-        image: faker.random.image()
+        name: "Dr. Pepper",
+        image: faker.random.image(),
+        shake: false
       }]
     }
   }

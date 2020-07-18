@@ -17,3 +17,14 @@
     text-align: center;
     text-decoration: underline;
 }
+
+.media-body {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#media_body {
+    display: inline;
+}

@@ -13,18 +13,20 @@ export function List({ children, title }) {
 }
 
 export function ListItem(props) {
+
+	let shake = props.shake === true ? "Shake" : "Don't Shake";
 	return (
 		<Media id="innerList" className="border border-secondary m-2" as="li">
 			<img
-				width={75}
-				height={75}
-				className="m-3"
+				width={100}
+				height={100}
+				className="ml-3 my-3"
 				src={props.image}
 				alt="Generic placeholder"
 			/>
-			<Media.Body>
-				<h5>{faker.random.words()}</h5>
-				<p>{faker.random.word()}</p>
+			<Media.Body className="row">
+				<div className="col-sm-6" id="media_body">{props.name}</div>
+				<div className="col-sm-6" id="media_body">{shake}</div>
 			</Media.Body>
 		</Media>
 	);
