@@ -14,14 +14,14 @@ export function List({ children, title }) {
 export function ListItem(props) {
 
 	let shake = props.shake === true ? "Shake" : "Don't Shake";
-
+	let image = props.image === undefined ? `download` : props.image;
 	return (
 		<Media key={props._id} id="innerList" className="border border-secondary m-2" as="li">
 			<img
 				width={100}
 				height={100}
 				className="ml-3 my-3"
-				src={`../../images/beverages/${props.image}.jpeg`}
+				src={require(`../../images/beverages/${image}.jpeg`)}
 				alt={props.name}
 			/>
 			<Media.Body className="row">
