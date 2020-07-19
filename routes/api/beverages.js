@@ -5,5 +5,8 @@ const beveragesController = require("../../controllers/beveragesController");
 router.route("/")
   .get(beveragesController.findAll)
 
+router.route("/:term")
+  .get(beveragesController.findSome)
+
 
 module.exports = router;

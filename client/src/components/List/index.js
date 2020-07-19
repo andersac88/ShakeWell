@@ -15,6 +15,7 @@ export function ListItem(props) {
 
 	let shake = props.shake === true ? "Shake" : "Don't Shake";
 	let image = props.image === undefined ? `download` : props.image;
+	//not sure why the above ternary is necessary but app crashes without it//
 	return (
 		<Media key={props._id} id="innerList" className="border border-secondary m-2" as="li">
 			<img
