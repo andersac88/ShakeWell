@@ -4,6 +4,8 @@ import "./style.css";
 function SelectDisplay(props) {
 	let shake = props.array[0].shake === true ? "Shake" : "Don't Shake";
 
+
+
 	return (
 		<div id="selectionDisplay" className="container m-3">
 			<div className="row">
@@ -15,8 +17,8 @@ function SelectDisplay(props) {
 							width={300}
 							height={300}
 							className="m-3"
-							src={props.array[0].image}
-							alt="Generic placeholder"
+							src={require(`../../images/beverages/images.jpeg`)}
+							alt={props.array[0].name}
 						/>
 					</div>
 				</div>

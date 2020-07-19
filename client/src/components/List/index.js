@@ -1,6 +1,5 @@
 import React from "react";
 import { Media } from "react-bootstrap";
-import faker from "faker";
 import "./style.css"
 
 export function List({ children, title }) {
@@ -15,14 +14,15 @@ export function List({ children, title }) {
 export function ListItem(props) {
 
 	let shake = props.shake === true ? "Shake" : "Don't Shake";
+
 	return (
-		<Media id="innerList" className="border border-secondary m-2" as="li">
+		<Media key={props._id} id="innerList" className="border border-secondary m-2" as="li">
 			<img
 				width={100}
 				height={100}
 				className="ml-3 my-3"
-				src={props.image}
-				alt="Generic placeholder"
+				src={`../../images/beverages/${props.image}.jpeg`}
+				alt={props.name}
 			/>
 			<Media.Body className="row">
 				<div className="col-sm-6" id="media_body">{props.name}</div>

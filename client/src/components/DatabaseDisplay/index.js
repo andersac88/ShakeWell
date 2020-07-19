@@ -4,13 +4,14 @@ import "./style.css";
 
 function DatabaseDisplay({array}) {
     return (
-        <React.Fragment id="databaseDisplay">
+        <React.Fragment >
         <List title="Database">
-            {array.map(temp => (
+            {array.map((temp, i )=> (
                 <ListItem 
+                    key = {i}
                     name = {temp.name}
                     shake = {temp.shake}
-                    image={temp.image}>
+                    image= {temp.image}>
                 </ListItem>
             ))   
             }
