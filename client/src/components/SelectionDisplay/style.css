@@ -9,7 +9,7 @@
     background-color: white;
 }
 
-#toShake {
+table, th, td {
     border: solid black 1px;
 }
 
