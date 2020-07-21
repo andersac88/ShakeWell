@@ -11,8 +11,8 @@ function SelectDisplay(props) {
 				<br />
 				{shake}
 			</div>
-			<div className="row">
-				<div className="col-5">
+			<div className="row pb-3 px-1">
+				<div className="col-6">
 					<img
 						id="selectionImage"
 						width="100%"
@@ -20,55 +20,78 @@ function SelectDisplay(props) {
 						alt={props.array[0].name}
 					/>
 				</div>
-				<div className="col-5" style={{ border: "solid" }}>
-					<div className="row">
-						<div className="col-12" style={{ paddingLeft: 0 }}>
-							Nutrition Facts
+				<div className="col-6" style={{ border: "solid" }}>
+					<div className="col px-1">
+						<div className="row">
+							<div className="col-12 px-0 facts">Nutrition Facts</div>
 						</div>
-					</div>
-					<div className="row">
-						<div className="col-12" style={{ paddingLeft: 0 }}>
-							Serving Size:
+						<div className="row">
+							<div className="a col-12 px-0">
+								Serving Size:
+								<br />1 Bottle
+							</div>
 						</div>
-					</div>
-					<div className="row">
-						<div className="col-12" style={{ paddingLeft: 0 }}>
-							Calories
+						<div className="row">
+							<div className="col-12 amountValue px-0 boldLine">
+								Amount per Serving
+							</div>
 						</div>
-					</div>
-					<div className="row">
-						<div className="col-12 text-right" style={{ paddingRight: 0}}>% Daily Value</div>
-					</div>
-					<div className="row">
-						<div className="col-6" style={{ paddingLeft: 0 }}>
-							Sodium
+						<div className="row">
+							<div className="a col-12  px-0 thinLine">
+								<strong>Calories</strong>
+								<span id="input">160</span>
+							</div>
 						</div>
-						<div className="col-6"></div>
-					</div>
-					<div className="row">
-						<div className="col-6" style={{ paddingLeft: 0 }}>
-							Total Carbohydrate
+						<div className="row">
+							<div className="col-12 px-0 text-right amountValue boldLine">
+								% Daily Value**
+							</div>
 						</div>
-						<div className="col-6"></div>
-					</div>
-					<div className="row">
-						<div className="col-12" style={{ paddingLeft: "8px" }}>
-							Sugars
+						<div className="row">
+							<div className="col-9 a px-0 thinLine">
+								<strong>Total Fat </strong>
+								<span id="input"> 0g</span>
+							</div>
+							<div className="a col px-0 thinLine text-right">
+								<strong>0%</strong>
+							</div>
 						</div>
-					</div>
-					<div className="row">
-						<div className="col-6" style={{ paddingLeft: 0 }}>
-							Protein
+						<div className="row">
+							<div className="a col-9 px-0 thinLine">
+								<strong>Sodium </strong>
+								<span id="input">35mg</span>
+							</div>
+							<div className="a col px-0 thinLine text-right">
+								<strong>1%</strong>
+							</div>
 						</div>
-						<div className="col-6"></div>
-					</div>
-					<div className="row">
-						<div className="col-12">
-							*Percent Daily Values are based on a 2,000 calorie diet.
+						<div className="row">
+							<div className="a col-10 px-0 thinLine">
+								<strong>Total Carbohydrate</strong>
+								<span id="input">39g</span>
+							</div>
+							<div className="col a px-0 thinLine text-right">
+								<strong>13%</strong>
+							</div>
+						</div>
+						<div className="row">
+							<div className="thinLine a col-12 ml-2">
+								Sugars<span id="input">38g</span>
+							</div>
+						</div>
+						<div className="row">
+							<div className="col-12 a px-0 thinLine">
+								<strong>Protein</strong>
+								<span id="input">0g</span>
+							</div>
+						</div>
+						<div className="row">
+							<div className="col-12 px-0 boldLine pdv">
+								**Percent Daily Values are based on a 2,000 calorie diet.
+							</div>
 						</div>
 					</div>
 				</div>
-				<div className="col-2"></div>
 			</div>
 		</div>
 	);

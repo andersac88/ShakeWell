@@ -9,10 +9,33 @@
     background-color: white;
 }
 
-table, th, td {
-    border: solid black 1px;
+.facts {
+   font-weight: bolder;
+   font-size: 1.4em
 }
 
-.row {
-    justify-content: center;
+.thinLine {
+    border-top: solid black 1.5px;
+}
+
+.boldLine {
+    border-top: solid black 5px;
+}
+
+#input {
+    padding-left: 10px;
+    font-size: inherit;
+}
+
+.amountValue {
+    font-size: .6em;
+    font-weight: 800;
+}
+
+.pdv {
+    font-size: .6em;
+}
+
+.a {
+    font-size: .8em;
 }
