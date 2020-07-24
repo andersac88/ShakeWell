@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Form, Button, Row } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 
 class SearchBar extends React.Component{
 	state = {
@@ -21,20 +21,21 @@ class SearchBar extends React.Component{
 
 	render() {
 		return (
-		<div className="my-4 mx-3">
+		<div className="my-4 mx-3" style={{width: "100%"}}>
 			<Form className="form-inline">
-				<Row>
+				
 					<input
 						type="text"
 						value={this.state.term}
 						className="mx-5"
-						id="searchForm"
+						id="sea	rchForm"
 						onChange={this.handleInputChange}
+						style={{width: "65%"}}
 					/>
-					<Button onClick={this.onFormSubmit} variant="primary" type="submit">
+					<Button onClick={this.onFormSubmit} variant="secondary" type="submit">
 						Search
 					</Button>
-				</Row>
+				
 			</Form>
 		</div>
 		)
