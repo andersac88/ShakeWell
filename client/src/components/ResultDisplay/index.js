@@ -1,7 +1,7 @@
 import React from "react";
 import { List, ListItem } from "../List";
 
-function ResultDisplay({ array }) {
+function ResultDisplay({ array, onSelect }) {
 	let mapArray = array.data === undefined ? [] : array.data;
 
 	return (
@@ -13,6 +13,7 @@ function ResultDisplay({ array }) {
 						image={drink.image}
 						shake={drink.shake}
 						name={drink.name}
+						onSelect={onSelect}
 					></ListItem>
 				))}
 			</List>

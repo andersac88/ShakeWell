@@ -11,7 +11,7 @@ import axios from "axios";
 class App extends Component {
 	state = {
 		array: [{}],
-		responseArray: [{}]
+		responseArray: [{}],
 	};
 
 	componentDidMount() {
@@ -29,9 +29,16 @@ class App extends Component {
 
 	handleFormSubmit = async (term) => {
 		const response = await axios.get(`/api/beverages/${term}`);
-		console.log(response);
 		this.setState({
-			responseArray: response
+			responseArray: response,
+		});
+	};
+
+	onSelect = async (term) => {
+		console.log("Hi")
+		const response = await axios.get(`/api/beverages/${term}`);
+		this.setState({
+			responseArray: response,
 		});
 	};
 
@@ -56,12 +63,13 @@ class App extends Component {
 								<Col>
 									<ResultDisplay
 										array={this.state.responseArray}
+										onSelect={this.onSelect}
 									></ResultDisplay>
 								</Col>
 							</Row>
 						</Col>
 						<Col>
-							<DatabaseDisplay array={this.state.array}></DatabaseDisplay>
+							<DatabaseDisplay onSelect={this.onSelect} array={this.state.array}></DatabaseDisplay>
 						</Col>
 					</Row>
 				</Container>

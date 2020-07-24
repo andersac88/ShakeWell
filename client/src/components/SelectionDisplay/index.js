@@ -6,10 +6,9 @@ function SelectDisplay(props) {
 
 	return (
 		<div id="selectionDisplay" className="container m-3">
-			<div className="row">
-				{props.array[0].name}
-				<br />
-				{shake}
+			<div className="row pb-">
+				<div className="col-6 beverageName">{props.array[0].name}</div>
+				<div className="col-6 toShake">{shake}</div>
 			</div>
 			<div className="row pb-3 px-1">
 				<div className="col-6">
@@ -20,7 +19,10 @@ function SelectDisplay(props) {
 						alt={props.array[0].name}
 					/>
 				</div>
-				<div className="col-6" style={{ border: "solid" }}>
+				<div
+					className="col-6"
+					style={{ border: "solid", marginBottom: "auto" }}
+				>
 					<div className="col px-1">
 						<div className="row">
 							<div className="col-12 px-0 facts">Nutrition Facts</div>

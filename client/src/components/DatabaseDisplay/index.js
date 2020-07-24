@@ -2,16 +2,18 @@ import React from "react";
 import {List, ListItem} from "../List";
 import "./style.css";
 
-function DatabaseDisplay({array}) {
+function DatabaseDisplay(props) {
+
     return (
         <React.Fragment >
         <List title="Database">
-            {array.map((temp, i )=> (
+            {props.array.map((temp, i )=> (
                 <ListItem 
                     key = {i}
                     name = {temp.name}
                     shake = {temp.shake}
-                    image= {temp.image}>
+                    image= {temp.image}
+                    onSelect = {props.onSelect}>
                 </ListItem>
             ))   
             }
