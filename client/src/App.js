@@ -10,8 +10,10 @@ import axios from "axios";
 
 class App extends Component {
 	state = {
-		array: [{}],
-		responseArray: [{}],
+		array: [],
+		selection: [],
+		responseArray: []
+		
 	};
 
 	componentDidMount() {
@@ -35,10 +37,10 @@ class App extends Component {
 	};
 
 	onSelect = async (term) => {
-		console.log("Hi")
 		const response = await axios.get(`/api/beverages/${term}`);
+		
 		this.setState({
-			responseArray: response,
+			selection: response.data[0],
 		});
 	};
 
@@ -52,7 +54,7 @@ class App extends Component {
 							<Row>
 								<Col>
 									<SelectionDisplay
-										array={this.state.array.slice(0, 1)}
+										selection={this.state.selection}
 									></SelectionDisplay>
 								</Col>
 							</Row>
@@ -62,7 +64,7 @@ class App extends Component {
 							<Row>
 								<Col>
 									<ResultDisplay
-										array={this.state.responseArray}
+										array={this.state.array}
 										onSelect={this.onSelect}
 									></ResultDisplay>
 								</Col>

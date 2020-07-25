@@ -3,8 +3,9 @@ import { List, ListItem } from "../List";
 
 function ResultDisplay({ array, onSelect }) {
 	let mapArray = array.data === undefined ? [] : array.data;
-
 	if (mapArray.length > 0) {
+
+	console.log(array.data[0])
 		let reducedArray = mapArray.slice(0, 5);
 		return (
 			<>

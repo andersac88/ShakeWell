@@ -1,13 +1,17 @@
 import React from "react";
 import "./style.css";
 
-function SelectDisplay(props) {
-	let shake = props.array[0].shake === true ? "Shake" : "Don't Shake";
+function SelectDisplay({selection}) {
+	let shake = selection.shake === true ? "Shake" : "Don't Shake";
+	let image = selection.image === undefined ? "download" : selection.image;
+	console.log(selection)
+
+	const serving = selection.servingSize
 
 	return (
 		<div id="selectionDisplay" className="container m-3">
 			<div className="row pb-">
-				<div className="col-6 beverageName">{props.array[0].name}</div>
+				<div className="col-6 beverageName">{selection.name}</div>
 				<div className="col-6 toShake">{shake}</div>
 			</div>
 			<div className="row pb-3 px-1">
@@ -15,8 +19,8 @@ function SelectDisplay(props) {
 					<img
 						id="selectionImage"
 						width="100%"
-						src={require(`../../images/beverages/images.jpeg`)}
-						alt={props.array[0].name}
+						src={require(`../../images/beverages/${image}.jpeg`)} 
+						alt={selection.name}
 					/>
 				</div>
 				<div
@@ -30,7 +34,7 @@ function SelectDisplay(props) {
 						<div className="row">
 							<div className="a col-12 px-0">
 								Serving Size:
-								<br />1 Bottle
+								<br />{serving ? selection.servingSize: <span>&nbsp;</span>}
 							</div>
 						</div>
 						<div className="row">
@@ -41,7 +45,7 @@ function SelectDisplay(props) {
 						<div className="row">
 							<div className="a col-12  px-0 thinLine">
 								<strong>Calories</strong>
-								<span id="input">160</span>
+								<span id="input">{selection.calories}</span>
 							</div>
 						</div>
 						<div className="row">
@@ -52,7 +56,7 @@ function SelectDisplay(props) {
 						<div className="row">
 							<div className="col-9 a px-0 thinLine">
 								<strong>Total Fat </strong>
-								<span id="input"> 0g</span>
+								<span id="input"> {selection.fat}</span>
 							</div>
 							<div className="a col px-0 thinLine text-right">
 								<strong>0%</strong>
