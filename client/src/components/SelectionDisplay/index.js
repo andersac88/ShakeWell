@@ -1,12 +1,9 @@
 import React from "react";
 import "./style.css";
 
-function SelectDisplay({selection}) {
-	let shake = selection.shake === true ? "Shake" : "Don't Shake";
-	let image = selection.image === undefined ? "download" : selection.image;
-	console.log(selection)
-
-	const serving = selection.servingSize
+function SelectDisplay({ selection }) {
+	const shake = selection.shake === true ? "Shake" : "Don't Shake";
+	const image = selection.image === undefined ? "download" : selection.image;
 
 	return (
 		<div id="selectionDisplay" className="container m-3">
@@ -15,11 +12,11 @@ function SelectDisplay({selection}) {
 				<div className="col-6 toShake">{shake}</div>
 			</div>
 			<div className="row pb-3 px-1">
-				<div className="col-6">
+				<div className="col-6 selectionImage">
 					<img
 						id="selectionImage"
 						width="100%"
-						src={require(`../../images/beverages/${image}.jpeg`)} 
+						src={require(`../../images/beverages/${image}.jpeg`)}
 						alt={selection.name}
 					/>
 				</div>
@@ -34,7 +31,12 @@ function SelectDisplay({selection}) {
 						<div className="row">
 							<div className="a col-12 px-0">
 								Serving Size:
-								<br />{serving ? selection.servingSize: <span>&nbsp;</span>}
+								<br />
+								{selection.servingSize ? (
+									selection.servingSize
+								) : (
+									<span>&nbsp;</span>
+								)}
 							</div>
 						</div>
 						<div className="row">
@@ -59,36 +61,36 @@ function SelectDisplay({selection}) {
 								<span id="input"> {selection.fat}</span>
 							</div>
 							<div className="a col px-0 thinLine text-right">
-								<strong>0%</strong>
+								<strong>{selection.fatp}</strong>
 							</div>
 						</div>
 						<div className="row">
 							<div className="a col-9 px-0 thinLine">
 								<strong>Sodium </strong>
-								<span id="input">35mg</span>
+								<span id="input">{selection.sodium}</span>
 							</div>
 							<div className="a col px-0 thinLine text-right">
-								<strong>1%</strong>
+								<strong>{selection.sodiump}</strong>
 							</div>
 						</div>
 						<div className="row">
 							<div className="a col-10 px-0 thinLine">
 								<strong>Total Carbohydrate</strong>
-								<span id="input">39g</span>
+								<span id="input">{selection.carb}</span>
 							</div>
 							<div className="col a px-0 thinLine text-right">
-								<strong>13%</strong>
+								<strong>{selection.carbsp}</strong>
 							</div>
 						</div>
 						<div className="row">
 							<div className="thinLine a col-12 ml-2">
-								Sugars<span id="input">38g</span>
+								Sugars<span id="input">{selection.sugar}</span>
 							</div>
 						</div>
 						<div className="row">
 							<div className="col-12 a px-0 thinLine">
 								<strong>Protein</strong>
-								<span id="input">0g</span>
+								<span id="input">{selection.protein}</span>
 							</div>
 						</div>
 						<div className="row">
