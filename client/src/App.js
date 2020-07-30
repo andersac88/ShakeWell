@@ -30,10 +30,14 @@ class App extends Component {
 
 	handleFormSubmit = async (term) => {
 		const response = await axios.get(`/api/beverages/${term}`);
-		this.setState({
-			selection: response.data[0],
-		});
-		console.log(this.state.responseArray)
+		console.log(response.data.length);
+		if (response.data.length === 1) {
+			this.setState({
+				selection: response.data[0],
+			});
+		} else {
+			return;
+		}
 	};
 
 	onSelect = async (term) => {
