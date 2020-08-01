@@ -118,6 +118,20 @@ const beverageSeed = [
         carbsp: "7%",
         sugar: "18g",
         protein: "0g",
+	},  {
+		name: "Yoo-Hoo Chocolate Drink",
+		image: `yoohoo`,
+        shake: true,
+        servingSize: "16 oz",
+        calories: 230,
+        fat: "2g",
+        fatp: "3%",
+        sodium: "340mg", 
+        sodiump: "14%",
+        carb: "51g",
+        carbsp: "17%",
+        sugar: "45g",
+        protein: "3g",
 	}
     
 ];
