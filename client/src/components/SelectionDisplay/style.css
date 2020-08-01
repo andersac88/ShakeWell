@@ -1,52 +1,52 @@
 #selectionDisplay {
-    display: flex;
-    flex-direction: column;
-    border: solid;
-    border-color: #6c757d;
-    border-radius: 1%;
-    border-width: .33em !important;
-    width: auto !important;
-    background-color: white;
+	border: solid;
+	border-color: #6c757d;
+	border-radius: 1%;
+	border-width: 0.33em !important;
+	background-color: white;
 }
 
+#selectionImage {
+    width: 100%;
+}
 
 .facts {
-   font-weight: bolder;
-   font-size: 1.4em
+	font-weight: bolder;
+	font-size: 1.4em;
 }
 
 .thinLine {
-    border-top: solid black 1.5px;
+	border-top: solid black 1.5px;
 }
 
 .boldLine {
-    border-top: solid black 5px;
+	border-top: solid black 5px;
 }
 
 #input {
-    padding-left: 10px;
-    font-size: inherit;
+	padding-left: 10px;
+	font-size: inherit;
 }
 
 .amountValue {
-    font-size: .6em;
-    font-weight: 850;
+	font-size: 0.6em;
+	font-weight: 850;
 }
 
 .pdv {
-    font-size: .6em;
+	font-size: 0.6em;
 }
 
 .a {
-    font-size: .8em;
+	font-size: 0.8em;
 }
 
 .toShake {
-    text-align: center;
-    font-size: 1.4em;
+	text-align: center;
+	font-size: 1.4em;
 }
 
 .beverageName {
-    text-align: center;
-    font-size: 1.4em;
+	text-align: center;
+	font-size: 1.4em;
 }

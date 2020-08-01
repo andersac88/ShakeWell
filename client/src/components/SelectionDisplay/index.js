@@ -14,8 +14,10 @@ function SelectDisplay({ selection }) {
 			<div className="row pb-3 px-1">
 				<div className="col-6 selectionImage">
 					<img
+						className="mx-auto"
 						id="selectionImage"
 						width="100%"
+						
 						src={require(`../../images/beverages/${image}.jpeg`)}
 						alt={selection.name}
 					/>

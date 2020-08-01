@@ -5,8 +5,8 @@ import "./style.css";
 function DatabaseDisplay(props) {
 
     return (
-        <React.Fragment >
-        <List title="Database">
+        <React.Fragment  >
+        <List style={{overflow: "scroll !important", height: "400px"}} title="Database">
             {props.array.map((temp, i )=> (
                 <ListItem 
                     key = {i}

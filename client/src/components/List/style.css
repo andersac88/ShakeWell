@@ -2,10 +2,12 @@
     border-radius: 1%;
     border-width: .33em !important;
     background: white;
+
 }
 
 #outerListList {
-    background: white;
+    background: white;  overflow: scroll;
+    height: 800px;
 }
 
 #innerList {
