@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import DatabaseDisplay from "./components/DatabaseDisplay";
 import SelectionDisplay from "./components/SelectionDisplay";
 import SearchBar from "./components/SearchBar";
-import ResultDisplay from "./components/ResultDisplay";
+//import ResultDisplay from "./components/ResultDisplay";
 import axios from "axios";
 
 class App extends Component {
@@ -22,7 +22,16 @@ class App extends Component {
 		axios
 			.get("/api/beverages/")
 			.then((res) => {
-				this.setState({ array: res.data });
+				const sortedArray = res.data.sort(function(a, b){
+					const nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
+					if (nameA < nameB) //sort string ascending
+						return -1 
+					if (nameA > nameB)
+						return 1
+					return 0 //default return value (no sorting)
+				})
+				this.setState({ array: sortedArray });
+				console.log(this.state.array)
 			})
 			.catch((error) => console.log("error"));
 	};
@@ -64,10 +73,10 @@ class App extends Component {
 							</Row>
 							<Row>
 								<Col>
-									<ResultDisplay
+									{/* <ResultDisplay
 										array={this.state.array}
 										onSelect={this.onSelect}
-									></ResultDisplay>
+									></ResultDisplay> */}
 								</Col>
 							</Row>
 						</Col>

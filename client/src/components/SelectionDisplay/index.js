@@ -7,14 +7,10 @@ function SelectDisplay({ selection }) {
 
 	return (
 		<div id="selectionDisplay" className="container m-3">
-			<div className="row pb-">
-				<div className="col-6 beverageName">{selection.name}</div>
-				<div className="col-6 toShake">{shake}</div>
-			</div>
-			<div className="row pb-3 px-1">
+
+			<div className="row pt-3 px-1">
 				<div className="col-6 selectionImage">
 					<img
-						className="mx-auto"
 						id="selectionImage"
 						width="100%"
 						
@@ -88,6 +84,7 @@ function SelectDisplay({ selection }) {
 							<div className="thinLine a col-12 ml-2">
 								Sugars<span id="input">{selection.sugar}</span>
 							</div>
+							
 						</div>
 						<div className="row">
 							<div className="col-12 a px-0 thinLine">
@@ -102,6 +99,10 @@ function SelectDisplay({ selection }) {
 						</div>
 					</div>
 				</div>
+			</div>
+			<div className="row pb-3">
+				<div className="col-6 beverageName">{selection.name}</div>
+				<div className="col-6 toShake">{shake}</div>
 			</div>
 		</div>
 	);
