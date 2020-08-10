@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import "./style.css";
-import { Form, Button } from "react-bootstrap";
+import React, { useState } from 'react';
+import './style.css';
+import { Form, Button } from 'react-bootstrap';
 
 const SearchBar = ({ handleFormSubmit }) => {
-	const [term, setTerm] = useState("");
+	const [term, setTerm] = useState('');
 
 	const formSubmit = (event) => {
 		event.preventDefault();
@@ -11,7 +11,7 @@ const SearchBar = ({ handleFormSubmit }) => {
 	};
 
 	return (
-		<div className="my-4 mx-3" style={{ width: "100%" }}>
+		<div className="my-4 mx-3" style={{ width: '100%' }}>
 			<Form className="form-inline">
 				<input
 					type="text"
@@ -19,7 +19,7 @@ const SearchBar = ({ handleFormSubmit }) => {
 					className="mx-5"
 					id="sea	rchForm"
 					onChange={(event) => setTerm(event.target.value)}
-					style={{ width: "65%" }}
+					style={{ width: '65%' }}
 				/>
 				<Button onClick={formSubmit} variant="secondary" type="submit">
 					Search

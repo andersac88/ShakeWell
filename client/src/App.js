@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import "./App.css";
-import { Container, Row, Col } from "react-bootstrap";
-import Navbar from "./components/Navbar";
-import DatabaseDisplay from "./components/DatabaseDisplay";
-import SelectionDisplay from "./components/SelectionDisplay";
-import SearchBar from "./components/SearchBar";
+import React, { Component } from 'react';
+import './App.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import Navbar from './components/Navbar';
+import DatabaseDisplay from './components/DatabaseDisplay';
+import SelectionDisplay from './components/SelectionDisplay';
+import SearchBar from './components/SearchBar';
 //import ResultDisplay from "./components/ResultDisplay";
-import axios from "axios";
+import axios from 'axios';
 
 class App extends Component {
 	state = {
 		array: [],
-		selection: []
+		selection: [],
 	};
 
 	componentDidMount() {
@@ -20,20 +20,21 @@ class App extends Component {
 
 	loadDatabase = () => {
 		axios
-			.get("/api/beverages/")
+			.get('/api/beverages/')
 			.then((res) => {
-				const sortedArray = res.data.sort(function(a, b){
-					const nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
-					if (nameA < nameB) //sort string ascending
-						return -1 
-					if (nameA > nameB)
-						return 1
-					return 0 //default return value (no sorting)
-				})
+				const sortedArray = res.data.sort(function (a, b) {
+					const nameA = a.name.toLowerCase(),
+						nameB = b.name.toLowerCase();
+					if (nameA < nameB)
+						//sort string ascending
+						return -1;
+					if (nameA > nameB) return 1;
+					return 0; //default return value (no sorting)
+				});
 				this.setState({ array: sortedArray });
-				console.log(this.state.array)
+				console.log(this.state.array);
 			})
-			.catch((error) => console.log("error"));
+			.catch((error) => console.log('error'));
 	};
 
 	handleFormSubmit = async (term) => {
